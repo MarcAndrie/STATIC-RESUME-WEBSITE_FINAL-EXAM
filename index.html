@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ANDRIE PABELLO</h1>
+            <p class="title">Software Engineer</p>
+            <div class="contact">
+                <a href="mailto:your.email@example.com">marcandrie.pabello.cvt@eac.edu.ph</a>
+                <span style="color: #333;">|</span>
+                <a href="tel:+1234567890">+123 456 7890</a>
+                <span style="color: #333;">|</span>
+                <a href="https://github.com/MarcAndrie" target="_blank">github.com/MarcAndrie</a>
+                <span style="color: #333;">|</span>
+                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            </div>
+        </header>
+
+        <section class="about">
+            <h2>About</h2>
+            <p>Dedicated, forward-thinking developer who thrives on solving complex problems with clean, efficient code. I combine strong technical expertise with excellent communication and teamwork skills, ensuring that I contribute not just as a coder, but as a reliable and collaborative professional. I constantly challenge myself to learn, innovate, and deliver results that exceed expectations.</p>
+            <p>Currently focused on developing innovative solutions that bridge the gap between cutting-edge technology and real-world business needs.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>JavaScript / TypeScript</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>React / Next.js</li>
+                        <li>Vue.js</li>
+                        <li>HTML / CSS</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Node.js / Express</li>
+                        <li>Django</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <ul>
+                        <li>Git / GitHub</li>
+                        <li>Docker</li>
+                        <li>AWS / Azure</li>
+                        <li>CI/CD</li>
+                        <li>XAMPP</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            
+            <div class="project">
+                <h3>Order Management System</h3>
+                <p class="project-tech">JavaScript • CoreJS • Alpine.js • HTML/CSS</p>
+                <p>Developed an Order Management System and later enhanced it by converting the interactive features from jQuery/CoreJS to Alpine.js. Improved code simplicity, responsiveness, and maintainability while retaining core order functions such as item selection, quantity updates, and total calculations.</p>
+            </div>
+
+            <div class="project">
+                <h3>Leave & Remote Request Management System</h3>
+                <p class="project-tech">ASP.NET Core MVC • C# • SQL • Syncfusion</p>
+                <p>Implemented a complete leave and remote request workflow system with approval/rejection, archiving, supervisor views, and detailed modals. Integrated DTOs, ViewModels, services, and repositories to maintain clean architecture and display supervisor information accurately.</p>
+            </div>
+
+            <div class="project">
+                <h3>Attendance Management System</h3>
+                <p class="project-tech">PHP • MySQL • HTML • CSS • JavaScript • Bootstrap • jQuery</p>
+                <p>Develop an attendance system provides secure user authentication, real-time attendance tracking, an intuitive dashboard, attendance history lookup, automated report generation, and robust data management, making it an efficient solution for organizing and monitoring attendance records.</p>
+            </div>
+        </section>
+
+        <section class="education">
+            <h2>Education & Certification</h2>
+            
+            <div class="education-item">
+                <h3>Bachelor of Science in Computer Science</h3>
+                <p class="degree">Emilio AGuinaldo College - Cavite</p>
+                <p class="date">2022 - 2026</p>
+            </div>
+
+            <div class="education-item">
+                <h3>Certifications</h3>
+                <ul class="cert-list">
+                    <li>AWS Certified Solutions Architect - 2023</li>
+                    <li>Meta Frontend Developer Professional Certificate - 2022</li>
+                    <li>Google Cloud Professional Developer - 2022</li>
+                </ul>
+            </div>
+        </section>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+    </button>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Check for saved theme preference or default to 'dark'
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        body.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const theme = body.getAttribute('data-theme');
+            const newTheme = theme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>
